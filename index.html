@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <aside>
@@ -15,40 +16,41 @@
         <footer>Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></footer>
     </aside>
     <main>
-        <h3>This is not a ral online service!
+        <p>This is not a ral online service!
              You know you need something like this in your life to help you realize your deepest dreams.
-             <br>Sign up now to get started.</h3>
-        <h3>You know you want to.</h3>
+             <br>Sign up now to get started.</p>
+        <p>You know you want to.</p>
         <form action="" id="firstForm">
             <h2>Let's do this!</h2>
             <div class="formRow">
                 <div>
                     <label>FIRST NAME</label>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
                 <div>
                     <label>LAST NAME</label>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
             </div>
             <div class="formRow">
                 <div>
                     <label>EMAIL</label>
-                    <input type="email">
+                    <input type="email" required>
                 </div>
                 <div>
                     <label>PHONE NUMBER</label>
-                    <input type="tel">
+                    <input type="tel" required minlength="12" maxlength="17" placeholder="+375(__)___-__-__">
                 </div>
             </div>
             <div class="formRow">
                 <div>
                     <label>PASSWORD</label>
-                    <input type="password">
+                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[1-9])[0-9a-zA-Z]{6,}" required>
+                    <span class="message"></span>
                 </div>
                 <div>
                     <label>CONFIRM PASSWORD</label>
-                    <input type="password">
+                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[1-9])[0-9a-zA-Z]{6,}" required>
                 </div>
             </div>
         </form>
